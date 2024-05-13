@@ -13,7 +13,7 @@ def app():
 
     # Define the layout of the app
     app.layout = html.Div([
-        html.H1("Employee Churn Prediction"),
+        html.H1("Employee Churn Prediction", style={'color': 'blue', 'font-size': '24px'}),
 
         html.Label("Branch"),
         dcc.Dropdown(
@@ -119,8 +119,8 @@ def app():
         dcc.Input(id="satisfaction", type="number", value=2.0),
 
         html.Button("Predict", id="predict_button", n_clicks=0),
-        html.Div(id="prediction_output")
-    ])
+        html.Div(id="prediction_output", style={'color': 'red'})
+    ], style={'display': 'flex', 'flexDirection': 'column', 'gap': '1em'})
 
     # Define callback to update prediction result
     @app.callback(

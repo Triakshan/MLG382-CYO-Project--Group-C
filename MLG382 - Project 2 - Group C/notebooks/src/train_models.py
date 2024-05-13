@@ -5,8 +5,8 @@ def model_1(df: pd.DataFrame):
     # Splitting the dataset into the Training set and Test set
     from sklearn.model_selection import train_test_split
 
-    X = df.drop(columns=['Loan_Status'], inplace=False)
-    y = df['Loan_Status']
+    X = df.drop(columns=['ChurnLikelihood'], inplace=False)
+    y = df['ChurnLikelihood']
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
 
